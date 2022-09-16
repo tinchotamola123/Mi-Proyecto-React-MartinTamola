@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import MyComponent from './components/MyComponent';
+import NavBar from './components/NavBar';
 
 function App() {
   console.log("Hola Mundo")
+  const value = {price : 100 , title : 'asd'};
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Mi Primer App en React.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Documentacion React
-        </a>
+        <p>Tienda de Vaporizadores</p>
+        <MyComponent name='coder' value={value} />
+        <MyComponent name='house' value={200} />
+        <NavBar />
       </header>
+      
     </div>
   );
 }
