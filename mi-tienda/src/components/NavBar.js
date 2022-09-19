@@ -1,13 +1,17 @@
 import { Container , Navbar , Nav } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import './CartWidget.css'
+import './NavBar.css'
+import LogoVB from "../assets/img/LogoVB.png"
 
 const NavBar = () =>{
     return(
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" className="nav">
+            <img src={LogoVB} alt="logo"></img>
             <Container>
+                
                 <Navbar.Brand href="#home">
-                    VapeBoss | Tienda de Vaporizadores
+                    | VapeBoss |<br></br>Tienda de Vaporizadores
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
