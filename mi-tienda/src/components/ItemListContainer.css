@@ -5,3 +5,6 @@
 p{
     color: rgb(226, 247, 247);
 }
+.mt-5{
+    min-height: 50vh;
+}
