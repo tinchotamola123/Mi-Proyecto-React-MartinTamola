@@ -1,8 +1,8 @@
 import { Container , Navbar , Nav } from "react-bootstrap";
 import CartWidget from "./CartWidget";
-import './CartWidget.css'
-import './NavBar.css'
-import LogoVB from "../assets/img/LogoVB.png"
+import './CartWidget.css';
+import './NavBar.css';
+import LogoVB from "../assets/img/LogoVB.png";
 
 const NavBar = () =>{
     return(
