@@ -1,8 +1,9 @@
 .navbar {
-height:110px ;
+height:100px ;
+background-color: black;
 }
 .navbar img {
     height:100px ;
-    width: 150px;
+    width: 100px;
     margin-left: 20px;   
 }

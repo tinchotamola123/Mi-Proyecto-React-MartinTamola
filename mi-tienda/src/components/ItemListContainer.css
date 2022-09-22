@@ -1,9 +1,9 @@
 .greeting{
-    color: rgb(226, 247, 247);
+    color: rgb(255, 255, 255);
     text-decoration: underline;
 }
 p{
-    color: rgb(226, 247, 247);
+    color: rgb(255, 255, 255);
 }
 .mt-5{
     min-height: 50vh;

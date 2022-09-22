@@ -6,12 +6,12 @@ import LogoVB from "../assets/img/LogoVB.png";
 
 const NavBar = () =>{
     return(
-        <Navbar bg="dark" variant="dark" className="nav">
+        <Navbar variant="dark" className="nav">
             <img src={LogoVB} alt="logo"></img>
             <Container>
                 
                 <Navbar.Brand href="#home">
-                    | VapeBoss |<br></br>Tienda de Vaporizadores
+                    VapeBoss <br></br>Tienda de Vaporizadores
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
