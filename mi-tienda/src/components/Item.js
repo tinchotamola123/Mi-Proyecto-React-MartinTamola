@@ -1,6 +1,7 @@
 import './Item.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const Item = ({product}) => {
     return ( 
@@ -15,11 +16,14 @@ const Item = ({product}) => {
                 style={{ width: '18rem' }}
                 className="cart mb-5 mt-5"
             >
-            <Card.Header><Card.Img variant="top" src={product.imagen} /></Card.Header>
+            <Card.Header><Card.Img variant="top" src={product.pictureUrl} /></Card.Header>
             <Card.Body>
-                <Card.Title className='cart'>{product.name}</Card.Title>
+                <Card.Title className='cart'>{product.title}</Card.Title>
                 <Card.Text>{product.description}</Card.Text>
-                <Button variant="primary">Añadir al Carrito</Button>
+                <Card.Text>$ {product.price}</Card.Text>
+                <Button variant="primary" as={Link} to={`s/item/${product.id}`}>
+                    Ver detalle
+                </Button>
             </Card.Body>
             </Card>
         ))}

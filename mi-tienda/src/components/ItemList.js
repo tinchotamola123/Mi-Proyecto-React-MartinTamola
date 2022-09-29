@@ -6,7 +6,6 @@ const ItemList = ({ products }) => {
     return ( 
         <>
         <h1>Lista de Productos</h1>
-        
             <Container className="vista">
                 {products.map((product) =>(<Item key={product.id} product={product}/>))}
             </Container>
