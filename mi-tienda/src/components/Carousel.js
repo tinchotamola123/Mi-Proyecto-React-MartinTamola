@@ -8,13 +8,13 @@ const Carusel = () => {
     return ( 
         <Carousel className='CaruselImg'>
             <Carousel.Item>
-                <img className="w-75" src={carusel1} alt="First slide"/>
+                <img className="w-100" src={carusel1} alt="First slide"/>
             </Carousel.Item>
             <Carousel.Item>
-                <img className="w-75" src={carusel2} alt="Second slide"/>
+                <img className="w-100" src={carusel2} alt="Second slide"/>
             </Carousel.Item>
             <Carousel.Item>
-                <img className="w-75" src={carusel3} alt="Third slide"/>
+                <img className="w-100" src={carusel3} alt="Third slide"/>
             </Carousel.Item>
         </Carousel>
     );

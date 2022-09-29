@@ -1,6 +1,8 @@
 .greeting{
     color: rgb(255, 255, 255);
-    text-decoration: underline;
+    font-size: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 p{
     color: rgb(255, 255, 255);
