@@ -1,6 +1,5 @@
 import './ItemListContainer.css';
 import Container from 'react-bootstrap/Container';
-import Counter from '../ItemDetail/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import Carusel from '../ItemList/Carousel';
 import { useParams } from 'react-router-dom';
@@ -27,8 +26,7 @@ const ItemListContainer = ({ greeting }) => {
         <Container className=''>
             <h3 className="greeting">{greeting}</h3>
             <ItemList products={products} />
-            <Carusel />
-            <Counter />
+            <Carusel /> 
         </Container>
     );
 }
