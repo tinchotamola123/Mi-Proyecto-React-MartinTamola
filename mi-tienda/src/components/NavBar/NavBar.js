@@ -1,7 +1,7 @@
 import { Container , Navbar , Nav } from "react-bootstrap";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css';
-import LogoVB from "../assets/img/LogoVB.png";
+import LogoVB from "../../assets/img/LogoVB.png";
 import { Link } from 'react-router-dom';
 
 const NavBar = () =>{
@@ -16,10 +16,10 @@ const NavBar = () =>{
                 </Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                    <Nav.Link as={Link} to='/item/id'>Vaporizadores</Nav.Link>
-                    <Nav.Link as={Link} to='/cart'>Resistencias</Nav.Link>
-                    <Nav.Link as={Link} to='/'>Contacto</Nav.Link>
-                    <Nav.Link as={Link} to='/'>Nosotros</Nav.Link>
+                    <Nav.Link as={Link} to='/category/vapos'>Vaporizadores</Nav.Link>
+                    <Nav.Link as={Link} to='/category/resis'>Resistencias</Nav.Link>
+                    <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
+                    <Nav.Link as={Link} to='/nosotros'>Nosotros</Nav.Link>
                 </Nav>
                 <CartWidget as={Link} to='/cart'/>
             </Container> 

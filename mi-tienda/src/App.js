@@ -1,11 +1,13 @@
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemList/ItemListContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import Cart from './components/Cart';
+import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout';
+import Contacto from './components/Contacto';
+import Nosotros from './components/Nosotros';
 
 
 function App() {
@@ -15,8 +17,10 @@ function App() {
         <NavBar />
           <Routes>
             <Route path='/' element={<ItemListContainer greeting={'VapeBoss'} />} />
-            <Route path='/category/:categoryName' element={<ItemDetailContainer />} />
+            <Route path='/category/:categoryId' element={<ItemListContainer />} />
             <Route path='/item/:id' element={<ItemDetailContainer />} />
+            <Route path='/contacto' element={<Contacto />} />
+            <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
           </Routes>
