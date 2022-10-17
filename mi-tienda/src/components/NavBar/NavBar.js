@@ -20,6 +20,7 @@ const NavBar = () =>{
                     <Nav.Link as={Link} to='/category/resis'>Resistencias</Nav.Link>
                     <Nav.Link as={Link} to='/contacto'>Contacto</Nav.Link>
                     <Nav.Link as={Link} to='/nosotros'>Nosotros</Nav.Link>
+                    <Nav.Link as={Link} to='/favoritos'>Favoritos</Nav.Link>
                 </Nav>
                 <CartWidget as={Link} to='/cart'/>
             </Container> 

@@ -1,36 +1,35 @@
 import Item from "../ItemList/Item";
 import { useState } from 'react';
-import './ItemCount.css';
+import './ItemDetail.css';
+import ItemCount from "../ItemCount/ItemCount";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({product}) => {
 
     const [count, setCount] = useState(0);
+    const [showItemCount , setShowItemCount] = useState(true);
 
-    const handleClickMas = () => {
-        setCount(count + 1);
-    };
-    const handleClickMenos = () => {
-        if(count === 0){
-
-        }else{
-        setCount(count - 1);
-        }
-    };
-    const AgregarAlCarrito = () => {
-        alert("Agregado Correctamente")
+    const handleAdd = (value) =>{
+        setCount(value);
+        setShowItemCount(false);
     };
 
     return (
         <>
         <Item product={product} />
-        <div className='contador'>
-            <button onClick={handleClickMenos}><b>-</b></button>
-            <h4> {count} </h4>
-            <button onClick={handleClickMas}><b>+</b></button>
-        </div>
-        <div>
-            <button onClick={AgregarAlCarrito}>Agregar al Carrito</button>
-        </div>
+        {
+            showItemCount && (
+                <ItemCount initial={1} stock={10} onAdd={handleAdd}/>
+            )
+        }
+        {
+            !showItemCount && (
+                <Link to='/cart'>
+                    <Button variant="success">Ir al carrito</Button> 
+                </Link>
+            )
+        }
         </>
     );
 }

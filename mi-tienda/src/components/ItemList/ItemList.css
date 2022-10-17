@@ -1,6 +1,8 @@
 .vista{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 50px;
+    gap: 20px;
 }

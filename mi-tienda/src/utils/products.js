@@ -24,7 +24,7 @@ export const getProduct = (id) =>{
             return resolve(result);
         }, 2000)    
     })
-
+    
     return promise
 }
 

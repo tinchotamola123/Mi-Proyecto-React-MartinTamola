@@ -1,0 +1,28 @@
+.itemCountContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.itemCountContainer div {
+    display: flex;
+}
+
+.contador{
+    display: inline-flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+}
+.contador h4{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.contador{
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+    margin-left: 20px;
+}

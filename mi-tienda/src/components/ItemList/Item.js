@@ -7,7 +7,7 @@ const Item = ({ product }) => {
     return ( 
         <Card className='cart' style={{ width: '18rem' }}>
             <Card.Img className='borde' variant="top" src={product.pictureUrl} />
-            <Card.Body>
+            <Card.Body className='cartBody'>
                 <Card.Title className='cart'>{product.title}</Card.Title>
                 <Card.Text className='cart'>{product.description}</Card.Text>
                 <Card.Text className='cart'>${product.price}</Card.Text>
