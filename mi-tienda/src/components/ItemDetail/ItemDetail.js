@@ -1,18 +1,20 @@
 import Item from "../ItemList/Item";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/CartContext";
 
 const ItemDetail = ({product}) => {
-
+    const { addItem } = useContext(CartContext);
     const [count, setCount] = useState(0);
     const [showItemCount , setShowItemCount] = useState(true);
 
     const handleAdd = (value) =>{
         setCount(value);
         setShowItemCount(false);
+        addItem (product , value);
     };
 
     return (

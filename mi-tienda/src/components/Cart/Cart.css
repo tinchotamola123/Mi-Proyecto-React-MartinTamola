@@ -1,1 +1,10 @@
-
+.tablacarrito{
+    color: rgb(255, 255, 255);
+}
+.tachobasura svg {
+    color: red;
+    cursor: pointer;
+}
+.tablacarrito td {
+    background-color: azure;
+}

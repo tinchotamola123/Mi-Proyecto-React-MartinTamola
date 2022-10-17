@@ -22,6 +22,29 @@ const ItemListContainer = ({ greeting }) => {
         }    
     },[categoryId])
 
+    //acceso a una coleccion -> list
+  /* useEffect(()=>{
+    //obtenemos la base de datos
+    const database = getFirestore();
+
+    //obtenemos la referencia a la coillection item
+    const collectionReference = collection(database, 'items');
+
+    //obtenemos los datos a partir de la referencia creada
+    getDocs(collectionReference)
+      .then((snapshot) =>{
+        const list = snapshot
+          .docs
+          .map((doc) => ({
+            id: doc.id,
+            ...doc.data()
+          }))
+          console.log(list);
+      })
+      .catch(error=>console.warn(error));
+  },[]); */
+
+
     return (
         <Container>
             <h1 className="greeting">{greeting}</h1>

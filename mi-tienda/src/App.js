@@ -14,6 +14,7 @@ import DarkProductList from './components/DarkProductList';
 import { FavoritosProvider } from './context/FavoritosContext';
 import { useEffect } from 'react';
 import { getFirestore , doc , getDoc, collection, getDocs } from 'firebase/firestore'
+import { CartProvider } from './context/CartContext';
 
 
 function App() {
@@ -40,32 +41,13 @@ function App() {
         .catch(error => console.warn(error));
 
     },[]);
-  //acceso a una coleccion -> list
-  useEffect(()=>{
-    //obtenemos la base de datos
-    const database = getFirestore();
-
-    //obtenemos la referencia a la coillection item
-    const collectionReference = collection(database, 'items');
-
-    //obtenemos los datos a partir de la referencia creada
-    getDocs(collectionReference)
-      .then((snapshot) =>{
-        const list = snapshot
-          .docs
-          .map((doc) => ({
-            id: doc.id,
-            ...doc.data()
-          }))
-          console.log(list);
-      })
-      .catch(error=>console.warn(error));
-  },[]);
+  
 
   return (
     <BrowserRouter>
       <div className="App">
       <CacheProvider>
+        <CartProvider>
         <NavBar />
           {/* <Events /> */}
           {/* <Intercambiabilidad /> */}
@@ -83,6 +65,7 @@ function App() {
             <Route path='/nosotros' element={<Nosotros />} />
           </Routes>
           </FavoritosProvider>
+          </CartProvider>
         </CacheProvider>
       </div>
     </BrowserRouter>
