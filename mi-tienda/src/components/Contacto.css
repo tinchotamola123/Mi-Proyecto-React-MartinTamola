@@ -1,0 +1,15 @@
+.nosotros{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+.nosotros p {
+    font-size: 25px;
+}
+.imgnosotros{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+}

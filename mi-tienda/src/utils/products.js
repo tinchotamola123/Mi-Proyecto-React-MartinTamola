@@ -1,13 +1,5 @@
 import { getFirestore , doc , getDoc, collection, getDocs, where ,query } from 'firebase/firestore';
 
-const products = [
-    {id: 1, title:'Vapo 1', category:'vapos' , description:'Electronico', price:100 , stock:20 , pictureUrl:'http://rosariovapeshop.com/wp-content/uploads/2020/09/vaporesso-revenger-x-kit_black.jpg'},
-    {id: 2, title:'Vapo 2', category:'vapos' , description:'Mecanico', price:100 , stock:20 , pictureUrl:'https://vapeomex.com/wp-content/uploads/2019/02/blackcamo_standing-min.png'},
-    {id: 3, title:'Vapo 3', category:'vapos' , description:'Kit de Inicio', price:100 , stock:20 , pictureUrl:'https://www.momo-once.com.ar/wp-content/uploads/2018/06/vape-kits-smoktech-stick-v8-kit-with-tfv8-big-baby-beast-tank-1_grande.jpg'},
-    {id: 4, title:'Resi 1', category:'resis' , description:'Resistencia Comercial', price:50 , stock:20 , pictureUrl:'https://d2r9epyceweg5n.cloudfront.net/stores/001/601/775/products/resis-pen1-8f3e6f7d3755ffd7b316166577945694-1024-1024.png'},
-    {id: 5, title:'Resi 2', category:'resis' , description:'Resistencia de Nicrom', price:50 , stock:20 , pictureUrl:'https://cdn.shopify.com/s/files/1/0306/6983/2327/products/AlienMech_600x.jpg?v=1596134435'},
-    {id: 6, title:'Resi 3', category:'resis' , description:'Resistencia de Malla', price:50 , stock:20 , pictureUrl:'https://jaquevape.com/wp-content/uploads/2019/01/OFRF-nexMesh-Replacement-Mesh-Coils-kit_1024x1024@2x.jpg'},
-]
 
 export const getAllProducts = () =>{
     const database = getFirestore();
@@ -43,9 +35,13 @@ export const getProduct = (id) =>{
 };
 
 export const getProductsByCategory = (categoryId) =>{
+    //OBTENEMOS LA BASE DE DATOS
     const database = getFirestore();
+    //obtenemos la referenciaa la collection
     const collectionReference = collection(database, 'items');
+    //crear query/consulta con el filtro qe queremos aplicar
     const collectionQuerry = query(collectionReference , where('category', '==' ,categoryId))
+    //obtenemos los datos desde firestore
     return getDocs(collectionQuerry)
         .then(snapshot => {
             const list = snapshot
@@ -58,3 +54,27 @@ export const getProductsByCategory = (categoryId) =>{
         })
         .catch(error=>console.warn(error));
 };
+
+
+/* const products = [
+    
+    {title:'liquido 1', category:'liquido' , description:'liquido de vainilla', price:150 , pictureUrl:'https://www.boutiquedelvapeo.com/4186-large_default/vanilla-biscuit-50ml-essential-vape-.jpg' , stock: 10 },
+    {title:'liquido 2', category:'liquido' , description:'liquido de frutilla', price:150 , pictureUrl:'https://jaquevape.com/wp-content/uploads/2019/01/OFRF-nexMesh-Replacement-Mesh-Coils-kit_1024x1024@2x.jpg' , stock: 10 },
+    {title:'liquido 2', category:'liquido' , description:'liquido de chocolate', price:150 , pictureUrl:'https://jaquevape.com/wp-content/uploads/2019/01/OFRF-nexMesh-Replacement-Mesh-Coils-kit_1024x1024@2x.jpg' , stock: 10 },
+] */
+
+/* export const createAllProducts = async () => {
+    try{
+        
+        const database = getFirestore();
+
+        const collectionReference = collection(database, 'items');
+
+        for(let i=0 ; i<products.length; i++) {
+            console.log(products[i]);
+            const snapshot = await addDoc(collectionReference,products[i])
+        }
+        }catch(error){
+            console.warn(error);
+        }
+    } */

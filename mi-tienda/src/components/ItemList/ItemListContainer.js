@@ -1,7 +1,5 @@
 import './ItemListContainer.css';
-import Container from 'react-bootstrap/Container';
 import ItemList from '../ItemList/ItemList';
-import Carusel from '../ItemList/Carousel';
 import { useParams } from 'react-router-dom';
 import { useEffect , useState } from 'react';
 import { getAllProducts, getProductsByCategory } from '../../utils/products';
@@ -46,11 +44,13 @@ const ItemListContainer = ({ greeting }) => {
 
 
     return (
-        <Container>
+        <div className='vistacarro'>
             <h1 className="greeting">{greeting}</h1>
-            {/* <Carusel />  */}
             <ItemList products={products} />
-        </Container>
+            <div className='footer'>
+              By Martin Tamola 2022
+            </div>
+        </div>
     );
 }
 

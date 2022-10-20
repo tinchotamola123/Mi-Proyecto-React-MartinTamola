@@ -1,0 +1,40 @@
+.pagar{
+    background-color: green;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.cancelar{
+    background-color: red;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.ordencompletada{
+    display:contents;
+}
+.orden{
+    padding: 10px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    background-color: rgb(201, 200, 199);
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.otracompra{
+    background-color: green;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: none;
+
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}

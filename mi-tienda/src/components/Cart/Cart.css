@@ -1,10 +1,18 @@
 .tablacarrito{
     color: rgb(255, 255, 255);
 }
-.tachobasura svg {
+.tablacarrito svg {
     color: red;
     cursor: pointer;
 }
 .tablacarrito td {
     background-color: azure;
+}
+.vaciarCarro{
+    display: flex;
+    justify-content: end;
+}
+.vaciarCarro svg{
+    color: red;
+    cursor: pointer;
 }

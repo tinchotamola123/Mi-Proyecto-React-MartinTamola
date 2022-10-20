@@ -1,20 +1,48 @@
 import './Cart.css';
-//import { useContext } from "react";
 import { Button, Container } from "react-bootstrap";
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import CartContext from '../../context/CartContext';
 import Table from 'react-bootstrap/Table';
 import { BsTrashFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import { createOrder } from '../../utils/orders';
+import OrderModal from '../OrderModal';
 
+
+const buyerMock = {
+    name: 'coderhouse',
+    phone: '112234455',
+    email: 'coderhouse@mail.com'
+}
 
 const Cart = () => {
-    const {cart , total , removeItem} = useContext(CartContext);
+    const {cart , total , removeItem , clear} = useContext(CartContext);
+    const [user , setUser] = useState(buyerMock);
+    const [showModal , setShowModal] = useState(false);
+    const [orderId, setOrderId] = useState();
 
-    console.log({cart , total});
 
-    const handleClick = (itemId) =>{
+    const handleRemove = (itemId) =>{
         removeItem(itemId);
+    }
+    const handleRemoveAll = (itemId) =>{
+        clear();
+    }
+    const handleOpen = () =>{
+        setShowModal(true);
+    }
+    const handleClose = () =>{
+        setShowModal(false);
+    }
+    const handleBuy = async () =>{
+        const newOrder = {
+            buyer: buyerMock,
+            items: cart,
+            total
+        };
+        const newOrderId = await createOrder(newOrder);
+        setOrderId(newOrderId);
+        clear();
     }
 
     const showTable = cart.length > 0 ;
@@ -40,12 +68,17 @@ const Cart = () => {
                     <td>{item.title}</td>
                     <td>{item.price}</td>
                     <td>{item.quantity}</td>
-                    <td><BsTrashFill className='tachobasura' onClick={() => handleClick(cart[0].id)} /></td>
+                    <td><BsTrashFill className='tachobasura' onClick={() => handleRemove(cart[0].id)} /></td>
                 </tr>
                 ))}
             </tbody>
             </Table>
             <h3>Total: $ {total}</h3>
+            <Button variant='success' onClick={handleOpen}>Finalizar compra</Button>
+            <div className='vaciarCarro'>
+            <p>Vaciar Carrito</p>
+            <BsTrashFill className='tachobasura' onClick={() => handleRemoveAll(clear())} />
+            </div>
             </>
             )}
             {
@@ -57,6 +90,12 @@ const Cart = () => {
             </Link>
             </>
             )}
+            <OrderModal 
+                showModal={showModal}
+                onClose={handleClose}
+                onBuy={handleBuy}
+                orderId={orderId}
+                />
         </Container>
     );
 }
