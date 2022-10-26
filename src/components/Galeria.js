@@ -4,7 +4,7 @@ import './Galeria.css';
 const Galeria = () => {
     return ( 
         <>
-        <h4 className="fotos">Galeria</h4>
+        <h4 className="fotos">Wallpapers</h4>
         <Carusel>
         </Carusel>
         <div className='footer'>

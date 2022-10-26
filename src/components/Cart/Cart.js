@@ -70,8 +70,8 @@ const Cart = () => {
                 <tr key={item.id}>
                     <td><img className='imgcarrito' src={item.pictureUrl} alt="Producto"></img></td>
                     <td className='td'>{item.title}</td>
-                    <td className='td'>{item.price}</td>
-                    <td className='td'>{item.quantity}</td>
+                    <td className='td'>${item.price}</td>
+                    <td className='td'>{item.quantity} Unidades</td>
                     <td className='td'><BsTrashFill className='tachobasura' onClick={() => handleRemove(cart[0].id)} /></td>
                 </tr>
                 ))}

@@ -5,7 +5,7 @@
 
 @media (max-width: 575px){
     .CaruselImg img{
-        height: 70vh;
-        margin-bottom: 20px;
+        height: 20vh;
+        margin-bottom: 30px;
     }
 }
