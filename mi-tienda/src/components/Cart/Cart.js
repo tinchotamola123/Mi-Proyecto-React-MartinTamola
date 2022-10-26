@@ -1,5 +1,5 @@
 import './Cart.css';
-import { Button, Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useContext, useState } from 'react';
 import CartContext from '../../context/CartContext';
 import Table from 'react-bootstrap/Table';
@@ -10,14 +10,14 @@ import OrderModal from '../OrderModal';
 
 
 const buyerMock = {
-    name: 'coderhouse',
-    phone: '112234455',
-    email: 'coderhouse@mail.com'
+    name: 'Martin Tamola',
+    phone: '157213130',
+    email: 'tinchotamola123@gmail.com'
 }
 
 const Cart = () => {
     const {cart , total , removeItem , clear} = useContext(CartContext);
-    const [user , setUser] = useState(buyerMock);
+    /* const [user , setUser] = useState(buyerMock); */
     const [showModal , setShowModal] = useState(false);
     const [orderId, setOrderId] = useState();
 
@@ -49,14 +49,16 @@ const Cart = () => {
 
     return ( 
         <div className='carrito'>
-            <h1>Carrito de Compras</h1>
+        
             {
             showTable && (
             <>
+            <h1>Carrito de Compras</h1>
             <div className='cajatabla'>    
             <Table striped bordered hover className='tablacarrito'>
             <thead className='headtabla'>
                 <tr>
+                    <th className='celdas'>Producto</th>
                     <th className='celdas'>Titulo</th>
                     <th className='celdas'>Precio</th>
                     <th className='celdas'>Cantidad</th>
@@ -66,10 +68,11 @@ const Cart = () => {
             <tbody className='bodytabla'>
                 {cart.map((item)=>(    
                 <tr key={item.id}>
-                    <td>{item.title}</td>
-                    <td>{item.price}</td>
-                    <td>{item.quantity}</td>
-                    <td><BsTrashFill className='tachobasura' onClick={() => handleRemove(cart[0].id)} /></td>
+                    <td><img className='imgcarrito' src={item.pictureUrl} alt="Producto"></img></td>
+                    <td className='td'>{item.title}</td>
+                    <td className='td'>{item.price}</td>
+                    <td className='td'>{item.quantity}</td>
+                    <td className='td'><BsTrashFill className='tachobasura' onClick={() => handleRemove(cart[0].id)} /></td>
                 </tr>
                 ))}
             </tbody>
@@ -87,7 +90,7 @@ const Cart = () => {
             !showTable && (
             <>
             <div className='contendorcarro'>
-            <h4>Carrito de compras vacio<br></br>Vamos a comprar !!!</h4>
+            <h1>Carrito de compras vacio<br></br>Ir a comprar</h1>
             <img className='imgcarro' src='https://images.pexels.com/photos/5624980/pexels-photo-5624980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='carritovacio'></img>
             <Link to='/'>
                 <Button variant="success">Ver Productos</Button>

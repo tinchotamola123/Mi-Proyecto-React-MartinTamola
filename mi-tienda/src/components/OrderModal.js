@@ -5,7 +5,9 @@ import Button from 'react-bootstrap/Form';
 import { Link } from "react-router-dom";
 import './OrderModal.css';
 
+
 const OrderModal = ({ showModal , onClose , onBuy , orderId}) => {
+
     return ( 
         <Modal show={showModal} onHide={onClose}>
         <Modal.Header closeButton>
@@ -13,11 +15,23 @@ const OrderModal = ({ showModal , onClose , onBuy , orderId}) => {
         </Modal.Header>
         <Modal.Body>
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" placeholder="Ingrese Nombre" />
+            <Form.Control 
+                    name='nombre' 
+                    type="text" 
+                    placeholder="Ingrese Nombre" 
+            />
             <Form.Label>Telefono</Form.Label>
-            <Form.Control type="number" placeholder="Ingrese Numero" />
+            <Form.Control
+                    name='telefono' 
+                    type="number" 
+                    placeholder="Ingrese Numero" 
+            />
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Ingrese Email" />
+            <Form.Control 
+                    name='email' 
+                    type="email" 
+                    placeholder="Ingrese Email" 
+            />
         </Modal.Body>
         <Modal.Footer>
             {!orderId && (

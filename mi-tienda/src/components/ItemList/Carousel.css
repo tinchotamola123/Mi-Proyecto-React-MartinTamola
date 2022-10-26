@@ -2,3 +2,10 @@
     height: 90vh;
     margin-bottom: 50px;
 }
+
+@media (max-width: 575px){
+    .CaruselImg img{
+        height: 70vh;
+        margin-bottom: 20px;
+    }
+}

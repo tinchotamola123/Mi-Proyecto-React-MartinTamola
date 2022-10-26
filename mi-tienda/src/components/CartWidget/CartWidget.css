@@ -1,4 +1,19 @@
 .container svg{
     color: white;
+    font-size: 40px;
+}
+.svgcarrito{
+    color: white;
     font-size: 30px;
+}
+.svgnavbar{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+.svgcantidad{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 39px;
+    font-size: 25px;
 }

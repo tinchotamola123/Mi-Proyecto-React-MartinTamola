@@ -56,24 +56,6 @@ export const getProductsByCategory = (categoryId) =>{
 };
 
 
-const products = [
-    
-    {
-    title:'liquido 1', 
-    
-    category:'liquido' , 
-    
-    description:'liquido de vainilla', 
-    
-    price:150 , 
-    
-    pictureUrl:'https://www.boutiquedelvapeo.com/4186-large_default/vanilla-biscuit-50ml-essential-vape-.jpg' , 
-    
-    stock: 10 
-},
-    
-] 
-
 /* export const createAllProducts = async () => {
     try{
         

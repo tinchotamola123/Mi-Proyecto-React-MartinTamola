@@ -2,3 +2,15 @@
     font-size: 30px;
     margin: 50px;
 }
+
+@media (max-width: 575px){
+    .fonthome{
+        font-size: 20px;
+        margin: 25px;
+        margin-bottom: 70px;
+    }
+    .imagenportada{
+        width: 500px;
+
+    }
+}

@@ -15,3 +15,12 @@ p{
     font-size: 20px;
     color: white;
 }
+
+@media (max-width: 575px){
+    .greeting{
+        color: rgb(255, 255, 255);
+        font-size: 70px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}

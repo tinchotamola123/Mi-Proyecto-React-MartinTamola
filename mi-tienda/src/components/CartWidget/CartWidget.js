@@ -3,7 +3,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import CartContext from '../../context/CartContext';
-import Badge from 'react-bootstrap/Badge';
 
 
 const CartWidget = () => {
@@ -12,10 +11,10 @@ const CartWidget = () => {
     return ( 
         <>
         <Link to='/cart'>
-            <AiOutlineShoppingCart />
+            <AiOutlineShoppingCart className='svgnavbar' />
         </Link>
         {totalQuantity > 0 && (
-            <Badge pill bg="dark">{totalQuantity}</Badge> 
+            <span pill className='svgcantidad' bg="dark">{totalQuantity}</span> 
         )}   
         </>
     );

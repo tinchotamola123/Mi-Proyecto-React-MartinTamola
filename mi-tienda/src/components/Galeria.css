@@ -4,3 +4,10 @@
     font-size: 50px;
     padding: 40px;
 }
+
+@media (max-width: 575px){
+    .fotos{
+        font-size: 25px;
+        padding: 20px;
+    }
+}

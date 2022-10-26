@@ -8,7 +8,7 @@
 }
 .cajatabla{
     margin-top: 50px;
-    height: 25vh;
+    height: auto;
     justify-content: center;
     align-items: center;
 }
@@ -25,6 +25,7 @@
 .vaciarCarro svg{
     color: red;
     cursor: pointer;
+    width: 20px;
 }
 .total{
     margin-bottom: 50px;
@@ -40,8 +41,8 @@ h4{
     margin-bottom: 25px;
 }
 .imgcarro{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 500px;
     height: 500px;
 }
@@ -50,4 +51,31 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.imgcarrito{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 575px){
+    .tablacarrito{
+        width: 100%;
+    }
+    .vaciartotal{
+        margin-left: 50px;
+    }
+    .imgcarrito{
+        width: 70px;
+        height: 70px;
+    }
+    .imgcarro{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 350px;
+        height: 350px;
+    }
+    .vaciartotal{
+        margin-top: 5px;
+        margin: 10px auto;
+    }
 }

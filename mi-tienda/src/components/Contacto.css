@@ -13,3 +13,16 @@
     height: 400px;
     margin-bottom: 50px;
 }
+@media (max-width: 575px){
+    .nosotros{
+        padding: 75px;
+    }
+    .nosotros p {
+        font-size: 19px;
+    }
+    .imgnosotros{
+        width: 350px;
+        height: 350px;
+        margin-bottom: 25px;
+    }
+}
