@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background-color: #272727;
+  background-color: #292828;
   font-family: "Times New Roman", Times, serif;
-  min-height: 100vh ;
+  min-height: 100vh;
 }
 
 @media (max-width: 575px){
   .App {
-    min-height: 70vh ;
+    min-height: 100vh;
   }
 }
 
