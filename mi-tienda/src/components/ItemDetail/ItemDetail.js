@@ -28,7 +28,7 @@ const ItemDetail = ({product}) => {
         {
             !showItemCount && (
                 <Link to='/cart'>
-                    <Button variant="success">Ir al carrito</Button> 
+                    <Button className="iralcarrito" variant="success">Ir al carrito</Button> 
                 </Link>
             )
         }

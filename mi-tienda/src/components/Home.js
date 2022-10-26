@@ -11,7 +11,7 @@ const Home = () => {
                 Vaporizadores , Resistencias , Liquidos. <br></br>Todo para vos.
             </p>
             <div className='footer'>
-              By Martin Tamola 2022
+                By Martin Tamola 2022
             </div>
         </>
     );

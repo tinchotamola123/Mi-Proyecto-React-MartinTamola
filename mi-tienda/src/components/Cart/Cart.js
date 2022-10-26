@@ -48,21 +48,22 @@ const Cart = () => {
     const showTable = cart.length > 0 ;
 
     return ( 
-        <Container className='tablacarrito'>
+        <div className='carrito'>
             <h1>Carrito de Compras</h1>
             {
             showTable && (
-            <>    
+            <>
+            <div className='cajatabla'>    
             <Table striped bordered hover className='tablacarrito'>
-            <thead>
+            <thead className='headtabla'>
                 <tr>
-                    <th>Titulo</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Accion</th>
+                    <th className='celdas'>Titulo</th>
+                    <th className='celdas'>Precio</th>
+                    <th className='celdas'>Cantidad</th>
+                    <th className='celdas'>Accion</th>
                 </tr>
             </thead>
-            <tbody className='tablacarrito'>
+            <tbody className='bodytabla'>
                 {cart.map((item)=>(    
                 <tr key={item.id}>
                     <td>{item.title}</td>
@@ -73,21 +74,25 @@ const Cart = () => {
                 ))}
             </tbody>
             </Table>
-            <h3>Total: $ {total}</h3>
-            <Button variant='success' onClick={handleOpen}>Finalizar compra</Button>
-            <div className='vaciarCarro'>
-            <p>Vaciar Carrito</p>
-            <BsTrashFill className='tachobasura' onClick={() => handleRemoveAll(clear())} />
             </div>
+            <h3 className='total'>Total: $ {total}</h3>
+            <Link to='/'>
+                <Button variant="success">Seguir comprando</Button>
+            </Link>
+            <Button className='compra' variant='success' onClick={handleOpen}>Finalizar compra</Button>
+            <Button className='vaciartotal' variant='danger' onClick={() => handleRemoveAll(clear())}>Vaciar Carrito</Button>
             </>
             )}
             {
             !showTable && (
             <>
-            <h3>Carrito de compras vacio</h3>
+            <div className='contendorcarro'>
+            <h4>Carrito de compras vacio<br></br>Vamos a comprar !!!</h4>
+            <img className='imgcarro' src='https://images.pexels.com/photos/5624980/pexels-photo-5624980.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='carritovacio'></img>
             <Link to='/'>
                 <Button variant="success">Ver Productos</Button>
             </Link>
+            </div>
             </>
             )}
             <OrderModal 
@@ -96,7 +101,7 @@ const Cart = () => {
                 onBuy={handleBuy}
                 orderId={orderId}
                 />
-        </Container>
+        </div>
     );
 }
 

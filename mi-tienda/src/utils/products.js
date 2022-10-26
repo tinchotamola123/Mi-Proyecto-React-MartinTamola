@@ -56,12 +56,23 @@ export const getProductsByCategory = (categoryId) =>{
 };
 
 
-/* const products = [
+const products = [
     
-    {title:'liquido 1', category:'liquido' , description:'liquido de vainilla', price:150 , pictureUrl:'https://www.boutiquedelvapeo.com/4186-large_default/vanilla-biscuit-50ml-essential-vape-.jpg' , stock: 10 },
-    {title:'liquido 2', category:'liquido' , description:'liquido de frutilla', price:150 , pictureUrl:'https://jaquevape.com/wp-content/uploads/2019/01/OFRF-nexMesh-Replacement-Mesh-Coils-kit_1024x1024@2x.jpg' , stock: 10 },
-    {title:'liquido 2', category:'liquido' , description:'liquido de chocolate', price:150 , pictureUrl:'https://jaquevape.com/wp-content/uploads/2019/01/OFRF-nexMesh-Replacement-Mesh-Coils-kit_1024x1024@2x.jpg' , stock: 10 },
-] */
+    {
+    title:'liquido 1', 
+    
+    category:'liquido' , 
+    
+    description:'liquido de vainilla', 
+    
+    price:150 , 
+    
+    pictureUrl:'https://www.boutiquedelvapeo.com/4186-large_default/vanilla-biscuit-50ml-essential-vape-.jpg' , 
+    
+    stock: 10 
+},
+    
+] 
 
 /* export const createAllProducts = async () => {
     try{

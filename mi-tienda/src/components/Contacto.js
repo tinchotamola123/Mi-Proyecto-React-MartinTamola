@@ -5,7 +5,7 @@ const Contacto = () => {
     return ( 
         <>
         <div className="nosotros">
-            <img className="imgnosotros" src={LogoVB}></img>
+            <img className="imgnosotros" src={LogoVB} alt='LogoVB'></img>
             <p>
             VAPEBOSS Contacto:
             <br></br>

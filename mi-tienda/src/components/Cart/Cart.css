@@ -1,18 +1,53 @@
-.tablacarrito{
+.carrito{
+    margin-top: 50px;
     color: rgb(255, 255, 255);
 }
 .tablacarrito svg {
     color: red;
     cursor: pointer;
 }
-.tablacarrito td {
-    background-color: azure;
+.cajatabla{
+    margin-top: 50px;
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
 }
-.vaciarCarro{
-    display: flex;
-    justify-content: end;
+.tablacarrito{
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.795);
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
 }
+.headtabla{
+    background-color: rgba(255, 255, 255, 0.85);
+} 
 .vaciarCarro svg{
     color: red;
     cursor: pointer;
+}
+.total{
+    margin-bottom: 50px;
+}
+.vaciartotal{
+    margin-left: 100px;
+}
+.compra{
+    margin-left: 10px;
+}
+h4{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.imgcarro{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    height: 500px;
+}
+.contendorcarro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
